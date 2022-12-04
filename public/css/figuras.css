@@ -1,0 +1,209 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Marcellus', serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*Cards*/
+.container-card {
+	padding-left: 10rem;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-width: 1500px;
+	margin: auto;
+}
+
+.container-card1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-width: 1500px;
+	margin: auto;
+}
+
+.title-cards {
+	width: 100%;
+	max-width: 1080px;
+	margin: auto;
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
+	color: #7a7a7a;
+}
+
+.card {
+
+	width: 70%;
+	height: 88%;
+	margin: 20px;
+	border-radius: 27px;
+	border-color: black;
+	overflow: hidden;
+	background: #304352;	
+	background: -webkit-linear-gradient(to right, #d7d2cc, #4a6172);	
+	background: linear-gradient(to right, #d7d2cc, #547085);	
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+
+.card1 {
+	width: 70%;
+	height: 88%;
+	margin: 20px;	
+	border-color: black;
+	border-radius: 27px;	
+	margin-left: 350px;
+	overflow: hidden;
+	background: #ffffff;	
+	background: -webkit-linear-gradient(to right, #d7d2cc, #4a6172);	
+	background: linear-gradient(to right, #d7d2cc, #547085);	
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+
+.card:hover {
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+	transform: translateY(-3%);
+}
+
+.card img {
+	width: 100%;
+	height: 250px;
+}
+
+.card .btn-dark {
+	background-color: yellowgreen;
+}
+
+.card .btn-primary {
+	background-color: green;
+}
+
+.card .contenido-card {
+	height: 30px;
+	text-align: center;
+	background-color: rgb(0, 0, 0);
+}
+
+.card .contenido-card h3 {
+	font-weight: bold;
+	margin-bottom: 24px;
+	color: #ffffff;
+
+}
+
+.card .contenido-card p {
+	line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 1px;
+	margin-bottom: 5px;
+}
+
+.card .contenido-card a {
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #2fb4cc;
+	border: 1px solid #2fb4cc;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+
+.card .contenido-card a:hover {
+	background: #2fb4cc;
+	color: #fff;
+}
+
+
+
+
+.card1:hover {
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+	transform: translateY(-3%);
+}
+
+.card1 img {
+	width: 100%;
+	height: 250px;
+}
+
+.card1 .btn-dark {
+	background-color: yellowgreen;
+}
+
+.card1 .btn-primary {
+	background-color: green;
+}
+
+.card1 .contenido-card {
+	height: 30px;
+	text-align: center;
+	background-color: rgb(0, 0, 0);
+}
+
+.card1 .contenido-card h3 {
+	font-weight: bold;
+	margin-bottom: 24px;
+	color: #ffffff;
+}
+
+.card1 .contenido-card p {
+	line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 1px;
+	margin-bottom: 5px;
+}
+
+.card1 .contenido-card a {
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #2fb4cc;
+	border: 1px solid #2fb4cc;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+
+.card1 .contenido-card a:hover {
+	background: #2fb4cc;
+	color: #fff;
+}
+
+
+
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+	.container-card {
+		grid-template-columns: 1fr;
+		flex-wrap: wrap;
+		margin-left: -4rem;
+	}
+
+	.card {
+		width: 100%;
+
+	}
+
+}
