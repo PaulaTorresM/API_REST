@@ -1,7 +1,6 @@
-const Usuario = require("../models/User");
-const Vehiculo = require("../models/Vehiculo");
-const Venta = require("../models/Venta");
-const jwt=require("jsonwebtoken");
+const Venta= require('../models/Venta');
+const User= require('../models/User');
+const Vehiculo= require('../models/Vehiculo');
 
 exports.obtener = async (req, res) => {
   try {
@@ -50,48 +49,28 @@ exports.obtenerid = async (req, res) => {
     }
   
   }
-
-  exports.add = async (req, res) => {  
-    
-   try {
-      const { precio, user,vehiculo} = req.body;
-      //console.log(req.body);  
-      const iduser = req.params.iduser;
-      const idVehiculo = req.params.idVehiculo;
-
-      const users=await Usuario.findById(iduser);
-      const vehiculos =await Vehiculo.findById(idVehiculo)
- 
-      try{
-        const NuevaVenta= new Venta ({precio, user:users._id, vehiculo:vehiculos._id})
-        console.log(NuevaVenta);
-        const saveVenta = await NuevaVenta.save();
-        vehiculos.ventas=vehiculos.ventas.concat(saveVenta._id);
-        await vehiculos.save();
-        users.ventas=users.ventas.concat(saveVenta._id);
-        await users.save();
-        console.log(saveVenta)
-        res.status(200).json(saveVenta);
-      }catch (error) {
-        res.status(500).json({msj:"Error al registrar"+error})
-      }
-      
+  exports.add = async (req, res) => {
+    try {
+     
+      const newVenta = new Venta(req.body,req.file)
+      console.log(req.file);
+      await newVenta.save();
+      console.log(newVenta);
+      res.json({ msj: "la venta se registro exitosamente", id: newVenta._id })
     } catch (error) {
       res.status(500).json({msj:"Error al registrar"+error})
     }
+  
   }
 
-exports.edit = async(req, res) => {
+  exports.edit = async(req, res) => {
     try {
       const id = req.params.id;
-      const newUser = new User(req.body)
-     
-
-      const cambioUsuario = await User.findByIdAndUpdate(
-         newUser);
-      res.json({ msj: "Usuario actualizado exitosamente"})
+      const newVenta = new Venta(req.body,req.file)
+      console.log(req.file);
+      const cambioVenta = await Venta.findByIdAndUpdate(id, newVenta);
+      res.json({ msj: " la venta se actualizó exitosamente"})
     } catch(error) {
       res.status(500).json(error);
     }
   }
-

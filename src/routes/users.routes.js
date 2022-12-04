@@ -1,22 +1,21 @@
-
 const {Router}=require("express");
 const rutasUser=Router();
-const ctrUser=require("../controllers/user.controller");
+const User=require("../controllers/user.controller");
 //const autorizedHuesped=require("../auth/auth.huesped");
 const multer=require("multer");
-const fecha=Date.now();
 
 
 
 
-rutasUser.get('/', ctrUser.obtener);
 
-rutasUser.get('/:id', ctrUser.obtenerid);
+rutasUser.get('/', User.obtener);
 
-rutasUser.post('/',ctrUser.add);
+rutasUser.get('/:id', User.obtenerid);
+
+rutasUser.post('/', User.add);
 
   
-rutasUser.put('/:id',ctrUser.edit);
+rutasUser.put('/:id', User.edit);
 
 
 module.exports=rutasUser;

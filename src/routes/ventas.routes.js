@@ -1,15 +1,15 @@
 const {Router}=require("express");
 const rutasVentas=Router();
 const autorizedHuesped=require("../auth/auth.huesped");
-const ctrRes=require("../controllers/ventas.controllers");
+const ven=require("../controllers/ventas.controllers");
 
-rutasVentas.get('/', ctrRes.obtener);
+rutasVentas.get('/',ven.obtener);
 
-rutasVentas.get('/:id', ctrRes.obtenerid);
+rutasVentas.get('/:id', ven.obtenerid);
 
-rutasVentas.post('/', ctrRes.add);
+rutasVentas.post('/', ven.add);
   
-rutasVentas.put('/:id', ctrRes.edit);
+rutasVentas.put('/:id', ven.edit);
 
 
 module.exports=rutasVentas;

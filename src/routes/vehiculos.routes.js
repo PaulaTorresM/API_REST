@@ -1,22 +1,21 @@
-
 const {Router}=require("express");
 const rutasVehiculos=Router();
 const autorizedHuesped=require("../auth/auth.huesped");
-const ctrHab=require("../controllers/Vehiculos.controller")
-const multer=require("multer");
-const fecha=Date.now();
+const veh=require("../controllers/Vehiculos.controller")
 
 
 
 
 
-rutasVehiculos.get('/', ctrHab.obtener);
 
-rutasVehiculos.get('/:id', ctrHab.obtenerid);
 
-rutasVehiculos.post('/',ctrHab.add,);
+rutasVehiculos.get('/', veh.obtener);
+
+rutasVehiculos.get('/:id', veh.obtenerid);
+
+rutasVehiculos.post('/', veh.add,);
   
-rutasVehiculos.put('/:id', ctrHab.edit);
+rutasVehiculos.put('/:id', veh.edit);
 
 
 module.exports=rutasVehiculos;
