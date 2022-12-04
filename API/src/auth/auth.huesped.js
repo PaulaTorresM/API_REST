@@ -8,7 +8,7 @@ const autorizedUsuario=async(req,res,next)=>{
     }
     const token=strToken.split(" ")[1];
     console.log(token);
-    const palabra="api-venta";
+    const palabra="hotelia-kuepa";
     const key=jwt.verify(token,palabra);
     const huesped=await User.findById(key._id);
     if(!huesped){

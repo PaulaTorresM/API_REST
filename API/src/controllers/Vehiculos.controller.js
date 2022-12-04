@@ -4,8 +4,7 @@ const Vehiculo = require("../models/Vehiculo");
 
 exports.obtener = async (req, res) => {
   try {
-    const Vehiculos = await Vehiculo.find().populate('ventas', {  
-      "_id": 1,    
+    const Vehiculos = await Vehiculo.find().populate('ventas', {      
       "precio": 1
     });;
     res.status(200).json(Vehiculos);
@@ -18,7 +17,6 @@ exports.obtenerid = async (req, res) => {
   try {
     const id = req.params.id;
     const Vehiculos = await Vehiculo.findById(id).populate('ventas', {      
-      "_id": 1, 
       "precio": 1
     });;
     res.status(200).json(Vehiculos);
@@ -29,7 +27,7 @@ exports.obtenerid = async (req, res) => {
 }
 exports.add = async (req, res) => {
   try {
-   
+    //const { matricula, tipo, marca, nombre, color} = req.body;
     const newVehiculo = new Vehiculo(req.body)    
     await newVehiculo.save();
     console.log(newVehiculo);

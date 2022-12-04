@@ -52,7 +52,7 @@ exports.obtenerid = async (req, res) => {
   }
   exports.add = async (req, res) => {
     try {
-     
+      //const { matricula, tipo, marca, nombre, color } = req.body;
       const newUser = new User(req.body)
       await newUser.save();
       console.log(newUser);
