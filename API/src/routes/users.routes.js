@@ -1,4 +1,3 @@
-
 const {Router}=require("express");
 const rutasUser=Router();
 const User=require("../controllers/user.controller");

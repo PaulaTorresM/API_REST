@@ -1,4 +1,37 @@
-#titulo{
-    font-size: 5px;
+.body{
+    background: url('https://www.hdcarwallpapers.com/download/koenigsegg_cc850_2022_4k_8k_2-1920x1080.jpg');
+}
+.titulo{
+    font-size: 50px;
     font-weight: bold;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.tit1{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.tit2{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.link{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(17, 17, 134);
+}
+.veh{
+    margin: 10px;    
+    width: 100%;
+}
+.usu{    
+    margin: 10px;
+    width: 100%;
+}
+.ven{    
+    margin: 10px;
+    width: 100%;
 }
