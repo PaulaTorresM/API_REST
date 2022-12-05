@@ -15,7 +15,7 @@ app.set("name","api-venta");
 app.set("port",process.env.PORT || 3007);
 
 
-
+app.use(express.static('public'));
 //Midlewares
 app.use(express.json());
 app.use(morgan("dev"));
