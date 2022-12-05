@@ -23,8 +23,7 @@ app.use(morgan("dev"));
 //Llamado de rutas
 app.use(express.static('public'));
 
-app.use('/public', express.static(__dirname + '/public'));
-app.use("/")
+
 app.use("/vehiculos",rutasVehiculos);
 app.use("/users",rutasUser);
 app.use("/ventas",rutasVentas);
